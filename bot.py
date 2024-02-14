@@ -45,7 +45,7 @@ async def main():
         now = datetime.datetime.now()
 
         # Check if it's 8:00 AM
-        if now.hour == 10 and now.minute ==0:
+        if now.hour == 16 and now.minute ==0:
             # Send the picture to a specific chat ID
             await send_picture()
 
