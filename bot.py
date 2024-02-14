@@ -1,6 +1,7 @@
 import os
 import random
 import datetime
+from glob import glob
 from threading import Thread
 import asyncio
 import schedule
@@ -8,7 +9,7 @@ import time
 import telegram
 
 # Folder containing pictures
-PICTURE_FOLDER = '/cards/'
+PICTURE_FOLDER = 'cards/'
 
 TOKEN = '6710218788:AAGyU9qMPBMoWYl6ILW-SKuwmwmEosO46AQ'
 
@@ -34,7 +35,7 @@ async def send_picture():
     photo = PICTURE_FOLDER + random_image
 
     # Send the image
-    print(photo)
+    print(random_image)
     await bot.send_photo(CHAT_ID, photo=open(photo, 'rb'))
 
 
@@ -45,7 +46,7 @@ async def main():
         now = datetime.datetime.now()
 
         # Check if it's 8:00 AM
-        if now.hour == 16 and now.minute ==0:
+        if now.hour == 16 and now.minute ==20:
             # Send the picture to a specific chat ID
             await send_picture()
 
