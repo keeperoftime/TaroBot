@@ -8,7 +8,7 @@ import time
 import telegram
 
 # Folder containing pictures
-PICTURE_FOLDER = '/Users/stolkacheva/Downloads/Taro/'
+PICTURE_FOLDER = '/cards/'
 
 TOKEN = '6710218788:AAGyU9qMPBMoWYl6ILW-SKuwmwmEosO46AQ'
 
